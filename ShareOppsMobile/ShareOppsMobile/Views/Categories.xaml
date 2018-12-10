@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShareOppsMobile.Views.Categories"
+             NavigationPage.HasNavigationBar="True" 
+             xmlns:viewModels1="clr-namespace:ShareOppsMobile.ViewModels"
+             Title="Categories"
+             >
+    <ContentPage.BindingContext>
+        <viewModels1:SearchViewModel/>
+
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+     <ScrollView >
+         <StackLayout Padding ="10" >
+         <Frame Padding ="0" >
+             <StackLayout Orientation ="Vertical " Spacing ="10" >
+                        <Grid x:Name="CategoriesGrid" RowSpacing ="5" Padding ="0,0,0,1" ColumnSpacing ="5" BackgroundColor ="WhiteSmoke ">
+                          <Grid.ColumnDefinitions >
+                                     <ColumnDefinition />
+                                     <ColumnDefinition />
+                                     <ColumnDefinition />
+                          </Grid.ColumnDefinitions>
+                          <Grid.RowDefinitions >
+                              <RowDefinition />
+                              <RowDefinition />
+                              <RowDefinition />
+                              <RowDefinition />
+                              <RowDefinition />
+                              <RowDefinition />
+                              <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand" >
+                                <!--<Button x:Name="ICT" Text=" ICT" Image=" ict.png" HorizontalOptions ="CenterAndExpand " />-->
+                                <Image Source ="ict.png" x:Name="ImageIct" HorizontalOptions ="CenterAndExpand "/>
+                                
+                                <Label Text ="ICT" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+
+                                
+                            </StackLayout >
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="0"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="banking.png" x:Name="imageFinance" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Finance" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="0"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="legal.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Legal" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="1"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="hr.png" HorizontalOptions ="CenterAndExpand " />
+                                <Label Text ="Human Resources" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="1"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="health.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Health" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="1"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="graduate.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Graduate" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="2"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="engineer.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Engineering" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="2"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="constr.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text =" Construction" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="2"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand" >
+                                <Image Source ="chemical.png" HorizontalOptions ="CenterAndExpand " />
+                                <Label Text ="Chemical Engineering" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="3"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="Agric.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Agriculture" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="3"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="admin.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Administration" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="3"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="advertising.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Media and Advertising" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="4"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="transport.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Transport" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="4"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="tourism.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Tourism and Hospitality" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="4"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="textile.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Textile and Clothing" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center"/>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="5"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="Security.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="SHEQ and Security" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="5"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="scienceres.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Science Research" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="5"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="sales.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Sales and Purchasing" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+
+
+                            <StackLayout Grid.Column ="0" Grid.Row ="6"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="ngo.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Government and NGOs" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="1" Grid.Row ="6"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="mine.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Mining" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column ="2" Grid.Row ="6"  Orientation ="Vertical" BackgroundColor ="White" Padding ="10" HorizontalOptions ="FillAndExpand">
+                                <Image Source ="management.png" HorizontalOptions ="CenterAndExpand "/>
+                                <Label Text ="Management" FontSize ="Small " HorizontalOptions ="FillAndExpand" HorizontalTextAlignment ="Center" />
+                            </StackLayout>
+
+
+                        </Grid>
+
+
+
+
+
+
+                    </StackLayout>
+
+         </Frame>
+         </StackLayout>
+
+        </ScrollView>  
+
+    </ContentPage.Content>
+</ContentPage>
+<!--<Grid >
+
+            <Grid >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height ="*"/>
+                    <RowDefinition Height ="*"/>
+                    <RowDefinition Height ="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row=" 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" Grid.Column="0">
+                        <Image Source ="jobs.png" Grid.Column ="0"  HorizontalOptions ="FillAndExpand" Aspect ="AspectFit"    />
+                        <Label Text =" Jobs And Internships" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="1">
+                        <Image Source ="gra.jpg " Grid.Column ="1"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Grants" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="2">
+                        <Image Source ="fellow.jpg" Grid.Column ="2"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Fellowship" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                </Grid>
+
+                <Grid Grid.Row=" 1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" Grid.Column="0">
+                        <Image Source ="jobs.png" Grid.Column ="0"  HorizontalOptions ="FillAndExpand" Aspect ="AspectFit"    />
+                        <Label Text =" Jobs And Internships" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="1">
+                        <Image Source ="gra.jpg " Grid.Column ="1"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Grants" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="2">
+                        <Image Source ="fellow.jpg" Grid.Column ="2"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Fellowship" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row=" 2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" *"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" Grid.Column="0">
+                        <Image Source ="jobs.png" Grid.Column ="0"  HorizontalOptions ="FillAndExpand" Aspect ="AspectFit"    />
+                        <Label Text =" Jobs And Internships" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="1">
+                        <Image Source ="gra.jpg " Grid.Column ="1"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Grants" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Column="2">
+                        <Image Source ="fellow.jpg" Grid.Column ="2"  HorizontalOptions ="FillAndExpand" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+                        <Label Text =" Fellowship" Grid.Column ="0" FontSize="10" FontAttributes ="Italic"/>
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+        </Grid >-->

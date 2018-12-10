@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShareOppsMobile.ViewModels"
+            
+             x:Class="ShareOppsMobile.Views.SubmitUserProfile"
+             NavigationPage.HasNavigationBar="True">
+
+
+    <ContentPage.BindingContext >
+        <viewModels:SubmitProfileViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+
+         
+        <StackLayout Padding ="20">
+
+        <Entry Placeholder=" First name"  Text ="{Binding SelectedUserProfile.FirstName}" FontSize=" 14"/>
+        <Entry Placeholder=" Last Name" Text ="{Binding SelectedUserProfile.LastName }" FontSize=" 14"/>
+           
+       
+        <Entry Placeholder=" Phone Number" Text ="{Binding SelectedUserProfile.PhoneNumber }" FontSize=" 14"/>
+            <Label  Text=" Qualification status " FontSize=" 14"/>
+            <Picker  x:Name ="QualificationPicker" SelectedIndexChanged ="GenderPicker_OnSelectedIndexChanged"  SelectedItem  ="{Binding SelectedUserProfile.HighQ  }" FontSize ="14"/>
+
+            <Label  Text=" Course Of Study " FontSize=" 14"/>
+            <Picker  x:Name ="CoursePicker" SelectedIndexChanged ="GenderPicker_OnSelectedIndexChanged" SelectedItem  ="{Binding SelectedUserProfile.FieldOfStudy }" FontSize ="14"/>
+            <Label Text=" Fields of interest" FontSize=" 14"/>
+            <Picker  x:Name ="FieldsofinterestPicker" SelectedIndexChanged ="GenderPicker_OnSelectedIndexChanged"  SelectedItem  ="{Binding SelectedUserProfile.SectorOfInterest  }" FontSize ="14"/>
+            <Label Text=" Gender" FontSize=" 14"/>
+            <Picker  x:Name ="GenderPicker" SelectedIndexChanged ="GenderPicker_OnSelectedIndexChanged"  SelectedItem  ="{Binding SelectedUserProfile.Gender  }"  FontSize ="14"/>
+        
+        <Label Text=" Date of Birth" FontSize=" 14"/>
+        <DatePicker  MinimumDate ="01/01/1900" MaximumDate="01/12/2018"  Date ="{Binding SelectedUserProfile.DOB}"/>
+        <Entry Placeholder=" Country" Text ="{Binding SelectedUserProfile.Country}" FontSize=" 14"/>
+
+            <Button Text =" Submit" 
+                Command ="{Binding SubmitProfileCommand}" BackgroundColor ="#A91717" TextColor ="White"/>
+
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

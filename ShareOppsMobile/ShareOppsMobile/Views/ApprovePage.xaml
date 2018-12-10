@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShareOppsMobile.ViewModels"
+             x:Class="ShareOppsMobile.Views.ApprovePage"
+             NavigationPage.HasNavigationBar="True" 
+             Title="Opportunity Details ">
+
+    
+<ScrollView>
+    <StackLayout Padding ="15">
+
+        <Label Text ="{Binding SelectedOppotunity.Title}"/>
+        <Label Text ="{Binding SelectedOppotunity.Description }"/>
+        <Label Text ="{Binding SelectedOppotunity.Organisation}"/>
+        <Label Text ="{Binding SelectedOppotunity.Venue }"/>
+        <Label Text ="{Binding SelectedOppotunity.Eligibility}"/>
+        <Label Text ="{Binding SelectedOppotunity.Benefits}"/>
+        <Label Text ="{Binding SelectedOppotunity.Province}"/>
+        <Label Text ="{Binding SelectedOppotunity.Country}"/>
+        <Label Text ="{Binding SelectedOppotunity.OppotunityLink}"/>
+        <Label Text ="{Binding SelectedOppotunity.Category}"/>
+        <Label Text  ="{Binding SelectedOppotunity.Deadline}"/>
+        <!--
+        <Switch IsToggled ="{Binding SelectedOppotunity.IsApproved}"></Switch>
+        -->
+
+            <Button Text ="Apply" BackgroundColor ="#A91717" TextColor ="White"
+                Command ="{Binding SaveCommand }"/>
+        <!--<Button Text ="Apply" Command Clicked="Button_OnClicked" />-->
+
+    </StackLayout>
+</ScrollView>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShareOppsMobile.Views.SavedOppBeforeReg">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor ="#A91717" >
+            <Label Text="#ShareOpps" FontSize ="Large " TextColor ="White"/>
+            <Label Text="We share opportunities, and bring you closer to your destiny
+Register and become a user.
+                   Login!!!
+Save the Opportunity and Get Notifications Later
+" FontSize ="Medium  " TextColor ="White"/>
+
+                
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

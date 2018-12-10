@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ShareOppsMobile.ViewModels;assembly=ShareOppsMobile"
+             x:Class="ShareOppsMobile.Views.SubmitOppotunity"
+             
+             NavigationPage.HasNavigationBar="True"
+             
+             >
+    <ContentPage.BindingContext >
+        <viewModels:SubmitViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView >
+        <StackLayout Padding=" 10">
+
+            <Entry Placeholder=" Title "  Text ="{Binding SelectedOppotunity.Title}" FontSize="Small"/>
+            <Entry Placeholder=" Description" Text ="{Binding SelectedOppotunity.Description}" FontSize="Small"/>
+            <Entry Placeholder=" Organization " Text ="{Binding SelectedOppotunity.Organisation}" FontSize="Small"/>
+            <Entry Placeholder=" Venue or Address" Text ="{Binding SelectedOppotunity.Venue }" FontSize="Small"/>
+            <Entry Placeholder=" Who is eligibly to apply?" Text ="{Binding SelectedOppotunity.Eligibility}" FontSize="Small"/>
+            <Entry Placeholder=" Benefits " Text ="{Binding SelectedOppotunity.Benefits}" FontSize="Small"/>
+            <Entry Placeholder=" Province" Text ="{Binding SelectedOppotunity.Province}" FontSize="Small"/>
+            <Entry Placeholder=" Category" Text ="{Binding SelectedOppotunity.Category }" FontSize="Small"/>
+            <Entry Placeholder=" Country" Text ="{Binding SelectedOppotunity.Country}" FontSize="Small"/>
+            <Entry Placeholder=" Web Link for more info" Text ="{Binding SelectedOppotunity.OppotunityLink}" FontSize="Small"/>
+        <DatePicker MinimumDate ="01/01/2018" MaximumDate="01/12/2050"  Date ="{Binding SelectedOppotunity.Deadline}"/>
+
+
+        <!--
+            <Entry Placeholder=" Deadline" Text ="{Binding SelectedOppotunity.Deadline}"/>
+        -->
+        <Button Text =" Submit" 
+                Command ="{Binding Submit}" TextColor="White"
+                BackgroundColor="#A91717"/>
+
+
+    </StackLayout>
+       </ScrollView>
+</ContentPage>

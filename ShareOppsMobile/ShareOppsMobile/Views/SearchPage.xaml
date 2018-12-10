@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:viewModels1="clr-namespace:ShareOppsMobile.ViewModels"
+             x:Class="ShareOppsMobile.Views.SearchPage"
+              Title="Search">
+
+    <ContentPage.BindingContext>
+        <viewModels1:SearchViewModel/>
+        
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+
+        <SearchBar Placeholder ="Enter Search Key: Category type or Organisation Name or Job Title or Province"  Text="{Binding Keyword, Mode = TwoWay  }"
+                   FontSize="12" />
+
+        <Button Command="{Binding SearchCommand}"
+                Text="Search"
+                FontSize="30"
+                TextColor="White"
+                BackgroundColor="#A91717"/>
+
+        <ListView ItemsSource="{Binding  SearchedOppotunities }"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="0,10">
+                            <Label Text ="{Binding Title}" FontSize ="Small " FontAttributes ="Bold" TextColor ="#A91717"/>
+                            <Label Text ="{Binding Description }"/>
+                            <Label Text ="{Binding Organisation}"/>
+                            <Label Text ="{Binding Venue }"/>
+                            <Label Text ="{Binding Eligibility}"/>
+                            <Label Text ="{Binding Benefits}"/>
+                            <Label Text ="{Binding Province}"/>
+                            <Label Text ="{Binding Country}"/>
+                            <Label Text ="{Binding OppotunityLink}"/>
+                            <Label Text ="{Binding Category}"/>
+                            <Label Text ="DeadLine:" FontSize ="12" Opacity ="0.6" TextColor ="#A91717"/>
+                            <Label Text  ="{Binding Deadline}" Opacity ="0.6" FontAttributes ="Bold"/>
+                            <!--
+        <Switch IsToggled ="{Binding SelectedOppotunity.IsApproved}"></Switch>
+        -->
+
+                            <Button Text =" Save Opportunity " BackgroundColor ="#A91717" TextColor ="White"
+                                    Command ="{Binding SaveCommand }"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

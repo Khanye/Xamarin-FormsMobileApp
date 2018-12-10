@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShareOppsMobile"
+             xmlns:viewModels="clr-namespace:ShareOppsMobile.ViewModels;assembly=ShareOppsMobile"
+             x:Class="ShareOppsMobile.MainPage"
+             NavigationPage.HasNavigationBar="True"
+             >
+
+
+    <ContentPage.BindingContext >
+        <viewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout >
+
+
+     
+
+        <ListView HasUnevenRows="True"
+                  ItemsSource ="{Binding Oppotunities }"
+                  ItemTapped ="ListView_OnItemTapped"
+                  IsPullToRefreshEnabled ="True"
+                  RefreshCommand ="{Binding RefreshCommand}"
+                  IsRefreshing ="{Binding IsRefreshing }">
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                  <Grid Padding ="15" >
+                      <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width=" 100 "/>
+                          <ColumnDefinition Width=" *"/>
+                         
+                      </Grid.ColumnDefinitions>
+
+                            <Image Source="ShareOppsLogo.png" HorizontalOptions ="Fill"  Aspect ="AspectFill "/>
+                             
+                            <StackLayout Grid.Column ="1" >
+
+                                <Label Text=" {Binding Title}" FontSize ="Small " FontAttributes ="Bold" TextColor ="#A91717" />
+                                <Label Text=" {Binding Organisation}" FontSize ="Small "/>
+                                <Label Text=" {Binding Venue}" />
+                                <Label Text=" {Binding Province}" />
+                                <Label Text=" Deadline" />
+                                <Label Text=" {Binding  Deadline}"  Opacity ="0.6"/>
+                                <!--
+                                <Label Text=" {Binding Description}" />
+                                <Label Text=" {Binding Organisation}" />
+                                <Label Text=" {Binding Eligibility}" />
+                                <Label Text=" {Binding Benefits" />
+                                <Label Text=" {Binding Country}" />
+                                <Label Text=" {Binding OppotunityLink}" />
+                                <Label Text=" {Binding IsApproved}" />
+                                
+                                -->
+                 
+                        </StackLayout>
+
+                  </Grid>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        </ListView>
+
+    </StackLayout>
+
+
+</ContentPage>

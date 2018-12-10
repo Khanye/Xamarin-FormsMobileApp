@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShareOppsMobile.Views.UserProfile"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+
+        <ScrollView >
+            
+                        <Grid   BackgroundColor ="WhiteSmoke ">
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions >
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                              <Image Grid.RowSpan="3" Grid.ColumnSpan=" 3" HorizontalOptions ="FillAndExpand"  Source="ShareOppsIcon.jpg " Opacity="0.3"/>
+
+                               <BoxView  HeightRequest=" 1"/>
+                              <StackLayout Grid.Row=" 3" Grid.ColumnSpan=" 3">
+                               
+
+
+
+                              </StackLayout>
+
+
+
+
+            </Grid>
+
+
+                  
+              
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
