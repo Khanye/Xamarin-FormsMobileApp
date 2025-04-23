@@ -1,0 +1,1 @@
+ShareOpps - This is a multiplatform application developed with Xamarin Forms that allows members to submit job, scholarships and mentorship opportunities and apply for them. The application produces an Android Apk File, and an IOS set up file. 
